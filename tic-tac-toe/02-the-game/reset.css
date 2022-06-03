@@ -1,0 +1,21 @@
+/* *{
+    box-sizing: border-box;
+    border: 1px solid white;
+} */
+
+body{
+    text-align: center;
+    background-color: rgb(211,60,45);
+    background-image: url('../icons/background.gif');
+    background-size: 100%;
+}
+
+.background{
+    xbackground-color: rgba(211, 59, 45, 0.526);
+    border-radius: 20px;
+}
+
+
+h1,p{
+    margin: 0px;
+}

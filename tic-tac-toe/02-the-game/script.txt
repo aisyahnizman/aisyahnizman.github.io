@@ -1,0 +1,150 @@
+let boxes = document.querySelectorAll('.box')
+
+for(let i=0; i< boxes.length; i++){
+    let singleBox = boxes[i]
+    theBox.addEventListener('mouseover', doThis(singleBox));
+}
+
+
+function doThis(thebox){
+    if(round == 1){
+        style1(theBox)
+    }
+    else{
+        style2(theBox)
+    }   
+}
+
+function style1(theBox){
+    theBox.value = 'X'
+    theBox.style.color = 'black'
+}
+function style2(theBox){
+    theBox.value = '0'
+    theBox.style.color = 'black'
+}
+
+=============================================================
+
+
+const hover_1 = () =>{
+    if(round == 1){
+        document.getElementById('b2').value = 'X'
+        document.getElementById('b2').style.color = 'black'
+    }
+    else{
+        document.getElementById('b2').value = '0'
+        document.getElementById('b2').style.color = 'black'
+    }   
+}
+const leave_1 = () =>{
+    document.getElementById('b2').value = ''
+}
+===============================================================
+
+x_win = ['X','X','X']
+0_win = ['0', '0','0']
+
+[b1,b2,3] = arr -- player x won
+[b1,b2,b3] = arr1 -- player 0 won
+
+if ([b1,b2,b3] == x){
+    document.getElementById('game-state').textContent = "Player X won!"
+    
+} 
+
+const PLAYER_X = 'X'
+const PLAYER_0 = '0'
+winningcombo [
+    0: [0,1,2]
+    1: [0,3,6]
+    2: [0,4,8]
+    3: [1,4,7]
+    4: [2,4,6]
+    5: [2,5,8]
+    6: [3,4,5]
+    7: [6,7,8]
+]
+
+boxes = document.querySelectorAll('.box')
+board = document.getElementById('board')
+winningMessage = document.getElementById('game-state-box')
+winningMessageElement = document.getElementById('game-state')
+
+//round
+let player_0_turn = false
+
+const startGame = () =>{
+    player_0_turn = false
+    for(let i=0; i < boxes.length; i++){
+        let singleBox = boxes[i]
+        singleBox.remove(PLAYER_X)
+        singleBox.remove(PLAYER_0)
+    }
+}
+
+//reset
+round = 0 / player_0_turn = false
+remove boxes
+
+checkwin
+
+for(let i=0; i < boxes.length; i++){
+        let singleBox = boxes[i]
+        if winning combinations == X
+        {player x win}
+        if winning combinations == 0
+        {player 0 win}
+
+}
+
+const checkwin = () =>{
+    for(i=0; boxes.length; i++){
+        let singleBox = boxes[i]
+        for(j=0; j< winningcombo.length; j++){
+            if(x_win == winningcombo[j]){
+                document.getElementById('game-state').textContent = "Player X won!"
+            }
+            else if(0_win = winningcombo[j]){
+                document.getElementById('game-state').textContent = "Player 0 won!"
+            }
+            else if ((b1 == 'X' || b1 == '0') && (b2 == 'X' || b2 == '0') && (b3 == 'X' || b3 == '0') && (b4 == 'X' || b4 == '0') && (b5 == 'X' || b5 == '0') && (b6 == 'X' || b6 == '0') && (b7 == 'X' || b7 == '0') && (b8 == 'X' || b8 == '0') && (b9 == 'X' || b9 == '0')){
+            document.getElementById('game-state').textContent = "It's a tie!"
+            }
+
+            else {
+                if(round == 0){
+                    document.getElementById('game-state').textContent = 'Player X Turn'
+                }
+                else{
+                    document.getElementById('game-state').textContent = 'Player 0 Turn'
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    let boxes = document.querySelectorAll('.box')
+for(let i=0; i < boxes.length; i++){
+    round = 1
+    let singleBox = boxes[i]
+    singleBox.addEventListener('mouseover', tohover)
+    singleBox.addEventListener('mouseleave', toleave)
+    singleBox.addEventListener('click', toclick)
+    singleBox.addEventListener('click', checkWin)
+
+    console.log(round)
+}
+
+while(boxes == ''){
+    if(round == 0){
+        document.getElementById('game-state').textContent = 'Player X Turn'
+        console.log("x turn")
+    }
+    else{
+        document.getElementById('game-state').textContent = 'Player 0 Turn'
+        console.log("0 turn")
+    } 
+}
